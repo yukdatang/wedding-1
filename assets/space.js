@@ -2,6 +2,8 @@ const button = document.querySelector(".button");
 const buttonText = document.querySelector(".button p");
 const thankText = document.querySelector(".button p:last-child");
 const mainContent = document.querySelector(".main");
+const bismillahAudio = document.getElementById('audio-bismillah');
+const ayatAudio = document.getElementById('audio-ayat');
 
 AOS.init();
 
@@ -9,7 +11,12 @@ const timeLine = new TimelineMax({
 	paused: false
 });
 
+bismillahAudio.onended = () => {
+  ayatAudio.play();
+}
+
 button.addEventListener("click", () => {
+  bismillahAudio.play()
 	timeLine
 		.to(buttonText, 0.6, {
 			opacity: 0
@@ -40,12 +47,12 @@ button.addEventListener("click", () => {
 			boxShadow: "0px 0px 85px 17px #fa2856",
 			delay: 0.2
 		})
-        .to('body', 0, {
-            display: 'block'
-        })
-        .to(mainContent, 0, {
-            display: 'block'
-        })
+    .to('body', 0, {
+        display: 'block'
+    })
+    .to(mainContent, 0, {
+        display: 'block'
+    })
 		.to(mainContent, 1, {
 			opacity: 1,
 			delay: 0.3
@@ -85,6 +92,7 @@ const x = setInterval(function() {
     document.getElementById("saveTheDate").innerHTML = "<div class='col'>Telah Lewat</div>";
   }
 }, 1000);
+
 
 
 function twoDigits(number) {
