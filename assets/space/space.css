@@ -20,7 +20,7 @@
 
 .section-1 {
   min-height: 400px;
-  background-image: url("../images/bg-3.jpg");
+  background-image: url("../../images/bg-3.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,7 +28,7 @@
 }
 
 .section-1-overlay {
-  background-color: rgba(20, 20, 20, 0.6);
+  background-color: rgba(20, 20, 20, 0.9);
   position: absolute;
   min-height: 400px;
   top: 0;
