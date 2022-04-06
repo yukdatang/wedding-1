@@ -3,17 +3,12 @@ const buttonText = document.querySelector(".button p");
 const thankText = document.querySelector(".button p:last-child");
 const mainContent = document.querySelector(".main");
 const bismillahAudio = document.getElementById('audio-bismillah');
-const ayatAudio = document.getElementById('audio-ayat');
 
 AOS.init();
 
 const timeLine = new TimelineMax({
 	paused: false
 });
-
-bismillahAudio.onended = () => {
-  ayatAudio.play();
-}
 
 button.addEventListener("click", () => {
   bismillahAudio.play()
@@ -92,8 +87,6 @@ const x = setInterval(function() {
     document.getElementById("saveTheDate").innerHTML = "<div class='col'>Telah Lewat</div>";
   }
 }, 1000);
-
-
 
 function twoDigits(number) {
     return number.toLocaleString('en-US', {
